@@ -1,0 +1,271 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ProDevs.master.cs" Inherits="Pro_Devs.ProDevs" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Pro Devs WatchHub</title>
+    <link rel="stylesheet" href="Css/Style.css"  />
+     <link rel="icon" href="img/logo/Prodevs.png"  />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style=" background-color: #222;">
+     <form id="form1" runat="server">
+     <header>
+        
+  
+         
+         <!-----------------------------------------Manager login navigation--------------------------------------------------- -------------------------------------------------->
+         <nav class="navbar navbar-expand-sm navbar-toggleable-sm  bg-dark border-bottom box-shadow mb-3 fixed-top"  id="Manager" runat="server" Visible = "false">
+            <div class="container-fluid">
+                
+                <a class="navbar-brand text-success" href="#">
+                <img src="img/logo/Prodevs.png" alt="Prodevs Logo" id="imgId" Visible ="true" runat="server" style="max-height: 40px;">
+                     <span id="welcomeMessage" runat="server" class="text-success" style="font-size: 20px;"></span>
+               </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-center">
+                    <ul class="navbar-nav flex-grow-1 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-success "   href="Dashboard.aspx">Dashboard</a>
+                        </li>
+                        
+                       
+                         <li class="nav-item">
+                            <a class="nav-link text-success "   href="ProductAddition.aspx"> Add Products</a>
+                        </li>
+
+                         <li class="nav-item">
+                            <a class="nav-link text-success "  id="homeLinkM" href="Products.aspx">Product Management</a>
+                        </li>
+                        
+                        <li class="nav-item dropdown"  runat="server"  >
+                                              
+                      </li>
+                     
+                    </ul>
+                   <ul class="navbar-nav ms-auto">
+                 
+                 
+
+                   <li class="nav-item">
+                         <a id="LoginM"  runat="server" class="nav-link text-success" href="UserLogin.aspx">Login</a> 
+                       <asp:LinkButton ID="LogoutM" runat="server" class="nav-link text-success" onClick="Logout_Click" Visible = "false">Logout</asp:LinkButton>
+                       
+                   </li>
+                     
+              </ul>
+                </div>
+            </div>
+        </nav>
+
+          <!-----------------------------------------Customer login navigation--------------------------------------------------- ---->
+          <nav class="navbar navbar-expand-sm navbar-toggleable-sm  bg-dark border-bottom box-shadow mb-3 fixed-top" id="customer" runat="server" Visible="false">
+            <div class="container-fluid">
+                
+                <a class="navbar-brand text-success" href="#">
+                <img src="img/logo/Prodevs.png" alt="Prodevs Logo" id="img1" Visible ="true" runat="server" style="max-height: 40px;">
+                     <span id="welcomeMessage1" runat="server" class="text-success" style="font-size: 20px;"></span>
+               </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-center">
+                    <ul class="navbar-nav flex-grow-1 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-success "  id="homeLinkC" href="Home.aspx">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-success" href="Products.aspx">Products</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-success" href="About.aspx">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-success" href="Contact.aspx">Contact</a>
+                        </li>
+                         <li class="nav-item">
+                           <a  class="nav-link text-success"   href="Invoice.aspx">Invoice</a>
+                        </li>                       
+                     
+                    </ul>
+                   <ul class="navbar-nav ms-auto">
+                     <li class="nav-item">
+                      <a class="nav-link text-success" href="WishList.aspx"><i class="fa-solid fa-heart"></i></a>
+                    </li>
+                   
+                       <li class="nav-item position-relative">
+                         <a class="nav-link text-success" href="Cart.aspx">
+                          <i class="fa-solid fa-cart-shopping"></i>
+                         <span id="cartCount" runat="server" class="badge bg-warning position-absolute top-0 start-100 translate-middle">0</span>
+                      </a>
+                    </li>
+
+                  
+
+                   <li class="nav-item">
+                         <a id="LoginC"  runat="server" class="nav-link text-success" href="UserLogin.aspx">Login</a> 
+                        <asp:LinkButton ID="LogoutC" runat="server" class="nav-link text-success" onClick="Logout_Click" Visible = "false">Logout</asp:LinkButton>
+                       
+                   </li>
+                      
+                 
+              </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-----------------------------------------Not login user--------------------------------------------------- ---->
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm  bg-dark border-bottom box-shadow mb-3 fixed-top" id="Nonlogged" runat="server"  Visible="true">
+            <div class="container-fluid">
+                
+                <a class="navbar-brand text-success" href="#">
+                <img src="img/logo/Prodevs.png" alt="Prodevs Logo" id="img2" Visible ="true" runat="server" style="max-height: 40px;">
+                     <span id="Span3" runat="server" class="text-success" style="font-size: 20px;"></span>
+               </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-center">
+                    <ul class="navbar-nav flex-grow-1 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-success " href="Home.aspx">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-success" href="Products.aspx">Products</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-success" href="About.aspx">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-success" href="Contact.aspx">Contact</a>
+                        </li>
+                         <li class="nav-item">
+                           <a  class="nav-link text-success"   href="FAQ.aspx">FAQ</a>
+                        </li>
+                       
+                     
+                    </ul>
+                   <ul class="navbar-nav ms-auto">
+                     <li class="nav-item">
+                     <a class="nav-link text-success" href="WishList.aspx"><i class="fa-solid fa-heart"></i></a>
+                    </li>
+                   
+                       <li class="nav-item position-relative">
+                         <a class="nav-link text-success" href="Cart.aspx">
+                          <i class="fa-solid fa-cart-shopping"></i>
+                         <span id="Span4" runat="server" class="badge bg-warning position-absolute top-0 start-100 translate-middle">0</span>
+                      </a>
+                    </li>
+
+                   <li class="nav-item">
+                     
+                    </li>
+
+                   <li class="nav-item">
+                         <a id="A2"  runat="server" class="nav-link text-success" href="UserLogin.aspx">Login</a> 
+                      
+                       
+                   </li>
+
+
+                      
+              </ul>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+   
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+
+    <hr />
+    <!-- Footer -->
+<footer class="text-white p-4 mt-5" style=" background-color: #222;">
+    <div class="container py-4">
+        <div class="row">
+            <!-- Quick Links -->
+            <div class="col-md-3 mb-4">
+                            <img src="img/logo/Prodevs.png" alt="Prodevs Logo" style="max-height: 60px;">
+                
+            </div>
+
+            <!-- Contact Information -->
+            <div class="col-md-3 mb-4">
+                <h5 class="text-uppercase text-warning">Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Phone: 0710000000</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Email: info@prodevs.com</a></li>
+                    <li><span class="text-white text-decoration-none">Address: 1234 Pro Street , Johhnesburg, Gauteng</span></li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-3 mb-4">
+                <h5 class="text-uppercase text-warning">Follow Us</h5>
+                <ul class="list-unstyled d-flex">
+                    <li class="me-3">
+                        <a href="#" class="text-white">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="me-3">
+                        <a href="#" class="text-white">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="me-3">
+                        <a href="#" class="text-white">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="me-3">
+                        <a href="#" class="text-white">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            
+
+        <!-- Copyright -->
+        <div class="row mt-4">
+            <div class="col text-center">
+                <p class="mb-0">&copy; 2024 Pro Devs WatchHub. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+   </div>
+</footer>
+
+  
+     
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>  
+</body>
+</html>
+

@@ -1,0 +1,252 @@
+﻿html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.navbar-nav .nav-link {
+    color: #28a745; 
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: #007bff; 
+}
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0; 
+    padding: 0; 
+    background-color: #222;
+    color: #fff; 
+    margin-bottom: 60px;
+}
+
+
+.welcome-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.welcome-section .lead {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.welcome-section a {
+    color: #ffffff;
+}
+
+.welcome-section a:hover {
+        color: #f0f0f0;
+}       
+
+
+/* Advertisement Section */
+.ad-section {
+    padding: 50px 0;
+}
+
+.ad-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ad-card img {
+    height: 200px;
+    width:200px;
+    object-fit: cover;
+}
+
+.ad-content {
+    padding: 20px;
+}
+
+.ad-content h3 {
+
+   font-size: 1.5rem;
+   margin-bottom: 10px;
+}
+
+.ad-content p {
+   font-size: 1.1rem;
+   margin-bottom: 15px;
+}
+
+.ad-content .btn-primary {
+  
+   background-color: #007bff;
+   border: none;
+}
+
+.ad-content .btn-primary:hover {
+  
+    background-color: #0056b3;
+}
+
+/* Phone Card Section */
+.phone-card-section {
+    padding: 50px 0;
+}
+
+    .phone-card-section .card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+    }    
+
+   
+
+    .phone-card-section .card-title {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+
+    .phone-card-section .card-text {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+.phone-card-section .btn-primary {
+     background-color: #007bff;
+     border: none;
+}
+
+.phone-card-section .btn-primary:hover {
+   background-color: #0056b3;
+
+}
+
+
+
+.carousel-image {
+    width: 100%;
+    margin-top:20px;
+    height: 600px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px; 
+}
+
+.ad-card {
+    overflow: hidden;
+}
+
+.ad-card img {
+        height: 200px;
+        width:100%;
+        object-fit: cover; 
+ }
+
+.ad-content {
+    padding: 20px;
+}
+
+hr{
+    color:green;
+    font-size:10px;
+}
+
+
+.watch-card {
+    background-color: #333; 
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.watch-content {
+    text-align: center;
+}
+
+.text-description{
+    color:white;
+}
+
+.sorting-section {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-select {
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid #28a745; 
+    padding: 5px;
+}
+
+.form-select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.5); 
+    
+}
+
+label {
+    font-weight: bold;
+}
+
+
+.shopping {
+    display: flex;
+    align-items: center;
+}
+.shopping img {
+    width: 24px;
+    height: 24px;
+}
+
+.quantity {
+    margin-left: 10px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.item .title {
+        flex: 1;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.checkOut {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
